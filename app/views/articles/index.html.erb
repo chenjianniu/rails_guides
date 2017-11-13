@@ -19,3 +19,10 @@
     </tr>
   <% end %>
 </table>
+
+
+<%= auto_discovery_link_tag(:atom, {action: "new"},{title: "RSS Feed"}) %>
+
+<%= render partial: 'index_extend',layout: 'index_extend_ys' %>
+<%= render partial: 'article_new',collection: @articles %>
+<%#= render @articles %>

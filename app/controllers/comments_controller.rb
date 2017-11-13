@@ -1,7 +1,6 @@
 class CommentsController < ApplicationController
 	http_basic_authenticate_with name: "chen", password: "jian", only: :destroy
 	def create
-		byebug
 		params.permit!
     @article = Article.find(params[:article_id])
     @comment = @article.comments.create(params[:comment])
@@ -9,7 +8,6 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-  	byebug
     @article = Article.find(params[:article_id])
     @comment = @article.comments.find(params[:id])
     @comment.destroy

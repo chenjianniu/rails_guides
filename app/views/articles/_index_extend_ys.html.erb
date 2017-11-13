@@ -4,17 +4,12 @@
     <title>RailsGuides</title>
     <%= csrf_meta_tags %>
     
-    <% content_for :head do %>
-      <h1>yield具名</h1>
-    <% end %>
-    <%= yield :head %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-  	application
+  	article_ys
     <%= yield %>    
   </body>
 </html>
